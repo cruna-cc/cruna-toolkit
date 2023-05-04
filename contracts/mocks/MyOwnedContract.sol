@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "../NFTOwned.sol";
+
+contract MyOwnedContract is NFTOwned {
+
+  error Unauthorized();
+  error NotInitiated();
+
+  mapping (uint => uint) public amounts;
+  mapping (uint => bool) public initiated;
+
+  modifier onlyOwnerOf(uint256 tokenId) {
+    if (msg.sender != ownerOf(tokenId)) revert Unauthorized();
+    _;
+  }
+
+  constructor(address owningToken_) NFTOwned(owningToken_){}
+
+  function init(uint256 tokenId) public onlyOwnerOf(tokenId) {
+    initiated[tokenId] = true;
+  }
+
+  function addSomeAmount(uint256 tokenId, uint256 amount) public onlyOwnerOf(tokenId) {
+    if (initiated[tokenId] == false) revert NotInitiated();
+    amounts[tokenId] += amount;
+  }
+
+  // convenience function to get the interface id of the INFTOwned interface
+  function getINFTOwnedInterfaceId() external pure returns (bytes4) {
+    return type(INFTOwned).interfaceId;
+  }
+
+}
