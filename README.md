@@ -21,7 +21,7 @@ pnpm test
 
 ## The tools
 
-[NFTOwned][./NFT_OWNED.md]
+[NFTOwned](./NFT_OWNED.md)
 
 The NFTOwned protocol allows an NFT (owning token) to have control over a subordinate contract implementing the INFTOwned interface. The owning token is an ERC721 token, and the subordinate contract is designed to restrict certain actions to the owner of the owning token.~~~~
 
