@@ -33,7 +33,7 @@ interface INFTOwned /* is ERC165 */ {
 }
 ```
 
-The smart contract implementing the interface should assure that the owning token is an ERC-721.
+The smart contract implementing the interface should verify that the owning token is an ERC-721. However, the protocol can be used to extend any smart contract that exposes an ownerOf function.
 
 ## The implementation
 
