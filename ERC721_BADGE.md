@@ -1,4 +1,4 @@
-# Dominant-Subordinate Protocol
+# Simple ERC721 Badge
 
 ### This was previously in @ndujaLabs/ERC721Subordinate
 
