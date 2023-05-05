@@ -1,7 +1,5 @@
 # NFT-owned Smart Contracts
 
-## Attention, this is the first draft. Changes are likely to happen. Use at your own risk. Wait for this message to be removed before using in production
-
 ## Overview
 The NFTOwned protocol allows an NFT (owning token) to have control over a subordinate contract implementing the INFTOwned interface. The owning token is an ERC721 token, and the subordinate contract is designed to restrict certain actions to the owner of the owning token.
 
@@ -64,3 +62,40 @@ Initialize the contract by calling the init function. This function can only be 
 Add some amount to the contract by calling the addSomeAmount function. This function can only be called by the owner of the corresponding owning token (NFT).
 
 The MyToken contract is an ERC721 token that acts as the owning token in this protocol. The owner of this token has control over the MyOwnedContract instances that correspond to the owned tokens.
+
+## Usage
+
+### THE NPM PACKAGE HAS NOT BEEN PUBLISHED YET
+
+```bash
+npm i @cruna/toolkit
+```
+
+A simple subordinate contract:
+
+```solidity
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@cruna/toolkit/nft-owned/NFTOwned.sol";
+
+contract MyOwnedContract is NFTOwned {
+
+  error Unauthorized();
+
+  // here your variables
+
+  modifier onlyOwnerOf(uint256 tokenId) {
+    if (msg.sender != ownerOf(tokenId)) revert Unauthorized();
+    _;
+  }
+
+  constructor(address owningToken_) NFTOwned(owningToken_){}
+
+  // here your specific functions
+
+}
+
+```
