@@ -1,7 +1,7 @@
 {
-  "name": "@cruna/nft-onwed",
+  "name": "@cruna/toolkit",
   "version": "0.1.0",
-  "description": "A protocol to define NFT-owned contracts",
+  "description": "The Cruna tool kit",
   "publishConfig": {
     "access": "public"
   },
@@ -16,16 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cruna-cc/nft-owned.git"
+    "url": "git+https://github.com/cruna-cc/toolkit.git"
   },
   "author": {
     "name": "Francesco Sullo",
     "email": "francesco@sullo.co"
   },
   "bugs": {
-    "url": "https://github.com/cruna-cc/nft-owned/issues"
+    "url": "https://github.com/cruna-cc/toolkit/issues"
   },
-  "homepage": "https://github.com/cruna-cc/nft-owned#readme",
+  "homepage": "https://github.com/cruna-cc/toolkit#readme",
   "license": "MIT",
   "devDependencies": {
     "@ethersproject/contracts": "^5.7.0",
