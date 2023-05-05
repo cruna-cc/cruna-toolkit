@@ -74,7 +74,6 @@ npm i @cruna/toolkit
 A simple subordinate contract:
 
 ```solidity
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
