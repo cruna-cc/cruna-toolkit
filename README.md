@@ -19,7 +19,7 @@ pragma solidity ^0.8.9;
 
 // An owned contract has no control on its own ownership.
 // Whoever owns the owning token owns the owned contract.
-// ERC165 interface id is
+// ERC165 interface id is 0x920c8b9e
 
 interface INFTOwned /* is ERC165 */ {
 

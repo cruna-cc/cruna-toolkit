@@ -16,6 +16,7 @@ describe("MyOwnedContract and MyToken Integration", function () {
 
     myOwnedContract = await MyOwnedContract.deploy(myToken.address);
     await myOwnedContract.deployed();
+    expect(await myOwnedContract.getINFTOwnedInterfaceId()).to.equal("0x920c8b9e");
 
     tokenId1 = 1;
     tokenId2 = 2;
