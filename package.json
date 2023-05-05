@@ -30,8 +30,8 @@
   "homepage": "https://github.com/cruna-cc/toolkit#readme",
   "license": "MIT",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.0",
-    "@openzeppelin/contracts-upgradeable": "^4.8.0"
+    "@openzeppelin/contracts": "^4.8.3",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3"
   },
   "devDependencies": {
     "@ethersproject/contracts": "^5.7.0",
