@@ -1,7 +1,11 @@
 require("@nomiclabs/hardhat-waffle");
 require("@openzeppelin/hardhat-upgrades");
-require("dotenv").config();
-require("cryptoenv").parse(() => process.env.NODE_ENV !== "test");
+
+require("solidity-coverage");
+if (process.env.GAS_REPORT) {
+  require("hardhat-gas-reporter");
+}
+
 
 module.exports = {
   solidity: {
@@ -19,11 +23,6 @@ module.exports = {
     },
     localhost: {
       url: "http://localhost:8545",
-    },
-    goerli: {
-      url: `https://goerli.infura.io/v3/${process.env.INFURA_KEY}`,
-      accounts: [process.env.FOR_TESTNET]
-    },
-
+    }
   },
 };

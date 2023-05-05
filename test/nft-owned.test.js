@@ -6,7 +6,7 @@ describe("MyOwnedContract and MyToken Integration", function () {
   let MyToken, MyOwnedContract, myToken, myOwnedContract, owner, addr1, addr2, tokenId1, tokenId2;
 
   beforeEach(async function () {
-    MyToken = await ethers.getContractFactory("MyToken");
+    MyToken = await ethers.getContractFactory("MyOwningToken");
     MyOwnedContract = await ethers.getContractFactory("MyOwnedContract");
 
     [owner, addr1, addr2] = await ethers.getSigners();

@@ -5,16 +5,14 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
 
 import "./INFTOwned.sol";
 
-contract NFTOwned is INFTOwned, IERC165 {
+contract NFTOwned is INFTOwned {
 
   error OwningTokenNotAnNFT();
 
-  IERC721 private immutable _owningToken;
+  IERC721 internal immutable _owningToken;
 
   constructor(address owningToken_) {
     _owningToken = IERC721(owningToken_);
@@ -22,8 +20,7 @@ contract NFTOwned is INFTOwned, IERC165 {
   }
 
   function supportsInterface(bytes4 interfaceId) public view virtual returns (bool) {
-    return interfaceId == type(INFTOwned).interfaceId ||
-      interfaceId == type(IERC165).interfaceId;
+    return interfaceId == type(INFTOwned).interfaceId || interfaceId == type(IERC165).interfaceId;
   }
 
   function owningToken() public view virtual override returns (address) {
@@ -33,5 +30,4 @@ contract NFTOwned is INFTOwned, IERC165 {
   function ownerOf(uint256 tokenId) public view virtual override returns (address) {
     return _owningToken.ownerOf(tokenId);
   }
-
 }

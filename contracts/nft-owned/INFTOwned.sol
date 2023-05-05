@@ -7,8 +7,8 @@ pragma solidity ^0.8.9;
 // Whoever owns the owning token owns the owned contract.
 // ERC165 interface id is 0x920c8b9e
 
-interface INFTOwned /* is ERC165 */ {
-
+/* is ERC165 */
+interface INFTOwned {
   // Returns the address of the owning token.
   function owningToken() external view returns (address);
 
@@ -17,5 +17,3 @@ interface INFTOwned /* is ERC165 */ {
   // some logic using an id corresponding to a tokenId of the owning token.
   function ownerOf(uint256 tokenId) external view returns (address);
 }
-
-

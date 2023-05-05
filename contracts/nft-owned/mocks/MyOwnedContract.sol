@@ -2,22 +2,21 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "../nft-owned/NFTOwned.sol";
+import "../NFTOwned.sol";
 
 contract MyOwnedContract is NFTOwned {
-
   error Unauthorized();
   error NotInitiated();
 
-  mapping (uint => uint) public amounts;
-  mapping (uint => bool) public initiated;
+  mapping(uint256 => uint256) public amounts;
+  mapping(uint256 => bool) public initiated;
 
   modifier onlyOwnerOf(uint256 tokenId) {
     if (msg.sender != ownerOf(tokenId)) revert Unauthorized();
     _;
   }
 
-  constructor(address owningToken_) NFTOwned(owningToken_){}
+  constructor(address owningToken_) NFTOwned(owningToken_) {}
 
   function init(uint256 tokenId) public onlyOwnerOf(tokenId) {
     initiated[tokenId] = true;
@@ -32,5 +31,4 @@ contract MyOwnedContract is NFTOwned {
   function getINFTOwnedInterfaceId() external pure returns (bytes4) {
     return type(INFTOwned).interfaceId;
   }
-
 }
