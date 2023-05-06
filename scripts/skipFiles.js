@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const excludedFolderPath = "contracts";
+const excludedFolderPath = path.resolve(__dirname, "../contracts");
 
 // Recursively get all .sol files within a folder
 function getSolidityFiles(folderPath) {
