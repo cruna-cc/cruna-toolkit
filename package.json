@@ -1,12 +1,13 @@
 {
   "name": "@cruna/toolkit",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "The Cruna tool kit",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "/contracts/**/*.sol"
+    "/contracts/**/*.sol",
+    "!/contracts/mocks/**/*"
   ],
   "scripts": {
     "test": "NODE_ENV=test npx hardhat test",

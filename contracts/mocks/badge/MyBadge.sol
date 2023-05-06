@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "../ERC721Badge.sol";
+import "../../badge/ERC721Badge.sol";
 
 contract MyBadge is ERC721Badge {
   constructor() ERC721Badge("MY Badge", "mBDG") {}

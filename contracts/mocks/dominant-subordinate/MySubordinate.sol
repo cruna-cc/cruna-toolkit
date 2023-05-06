@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-import "../ERC721Subordinate.sol";
+import "../../dominant-subordinate/ERC721Subordinate.sol";
 
 contract MySubordinate is ERC721Subordinate {
   using Strings for uint256;

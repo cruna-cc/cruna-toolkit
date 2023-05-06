@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-import "../ERC721Dominant.sol";
+import "../../dominant-subordinate/ERC721Dominant.sol";
 
 contract MyToken is ERC721Dominant, Ownable {
   constructor() ERC721Dominant("MyToken", "MTK") {}
