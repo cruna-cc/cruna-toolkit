@@ -10,7 +10,7 @@ NFTOwned, instead, does not put any limit on the number of subordinate contracts
 ## The interface
 
 ``` solidity
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL3
 pragma solidity ^0.8.9;
 
 // Authors: Francesco Sullo <francesco@sullo.co>
@@ -74,7 +74,7 @@ npm i @cruna/toolkit
 A simple subordinate contract:
 
 ```solidity
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL3
 pragma solidity ^0.8.9;
 
 import "@cruna/toolkit/nft-owned/NFTOwned.sol";

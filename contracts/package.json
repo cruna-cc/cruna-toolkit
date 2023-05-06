@@ -1,0 +1,34 @@
+{
+  "name": "@cruna/toolkit",
+  "version": "0.1.0-beta.3",
+  "description": "The Cruna tool kit",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "**/*.sol",
+    "/build/contracts/*.json",
+    "!/mocks/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruna-cc/toolkit.git"
+  },
+  "author": {
+    "name": "Francesco Sullo",
+    "email": "francesco@sullo.co"
+  },
+  "bugs": {
+    "url": "https://github.com/cruna-cc/toolkit/issues"
+  },
+  "homepage": "https://github.com/cruna-cc/toolkit#readme",
+  "license": "GPL3",
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "security",
+    "nft"
+  ]
+}

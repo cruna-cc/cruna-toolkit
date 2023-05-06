@@ -73,7 +73,7 @@ What makes the difference is the base token uri. Change that, and everything wil
 A simple example:
 
 ```solidity
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL3
 pragma solidity 0.8.17;
 
 import "@ndujalabs/erc721subordinate/contracts/ERC721Subordinate.sol";
@@ -86,7 +86,7 @@ contract MySubordinate is ERC721Subordinate {
 Another example, upgradeable
 
 ```solidity
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL3
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";

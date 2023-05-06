@@ -29,8 +29,9 @@ pnpm test
 
 ## Copyright
 
-(c) 2023, Francesco Sullo <francesco@sullo.co>, Cruna 
+Author Francesco Sullo <francesco@sullo.co>
+(c) 2023, Cruna 
 
 ## License
 
-This protocol is released under the MIT License.
+This protocol is released under the GPL3 License.

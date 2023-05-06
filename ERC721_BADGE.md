@@ -64,7 +64,7 @@ interface IERC6982 {
 It implements the IERC721DefaultApprovable and the IERC6982 interfaces.
 
 ```solidity
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL3
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";

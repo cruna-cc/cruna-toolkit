@@ -15,8 +15,7 @@
     "compile": "NODE_ENV=test npx hardhat compile",
     "lint": "prettier --write 'contracts/**/*.sol' && solhint 'contracts/**/*.sol'",
     "format": "npx prettier --write ./test/fixtures/**/*.js ./**/*.js",
-    "coverage": "NODE_ENV=test npx hardhat coverage",
-    "publish": "./publish.sh"
+    "coverage": "NODE_ENV=test npx hardhat coverage"
   },
   "repository": {
     "type": "git",
@@ -30,7 +29,7 @@
     "url": "https://github.com/cruna-cc/toolkit/issues"
   },
   "homepage": "https://github.com/cruna-cc/toolkit#readme",
-  "license": "MIT",
+  "license": "GPL3",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.3",
     "@openzeppelin/contracts-upgradeable": "^4.8.3"
@@ -61,5 +60,13 @@
   },
   "lint-staged": {
     "*.js": "prettier --write"
-  }
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "security",
+    "nft"
+  ]
 }
