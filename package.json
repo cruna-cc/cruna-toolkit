@@ -34,7 +34,8 @@
   "license": "GPL3",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.3",
-    "@openzeppelin/contracts-upgradeable": "^4.8.3"
+    "@openzeppelin/contracts-upgradeable": "^4.8.3",
+    "rimraf": "^5.0.0"
   },
   "devDependencies": {
     "@ethersproject/contracts": "^5.7.0",
