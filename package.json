@@ -1,6 +1,6 @@
 {
   "name": "@cruna/toolkit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The Cruna tool kit",
   "publishConfig": {
     "access": "public"
