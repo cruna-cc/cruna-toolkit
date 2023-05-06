@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-import "./interfaces/IERC721Subordinate.sol";
+import "./IERC721Subordinate.sol";
 import "../badge/ERC721Badge.sol";
 
 /**

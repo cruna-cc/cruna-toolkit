@@ -5,8 +5,8 @@ import "hardhat/console.sol";
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "./interfaces/IERC721Subordinate.sol";
-import "./interfaces/IERC721Dominant.sol";
+import "./IERC721Subordinate.sol";
+import "./IERC721Dominant.sol";
 
 abstract contract ERC721Dominant is IERC721Dominant, ERC721, ReentrancyGuard {
   error NotOwnedByDominant(address subordinate, address dominant);

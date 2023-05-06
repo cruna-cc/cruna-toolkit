@@ -6,7 +6,7 @@ import "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol"
 import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-import "./interfaces/IERC721Subordinate.sol";
+import "./IERC721Subordinate.sol";
 import "../badge/ERC721BadgeUpgradeable.sol";
 
 /**
